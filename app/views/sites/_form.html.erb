@@ -1,3 +1,7 @@
+<% content_for(:javascript_includes) do %>
+<%= 	javascript_include_tag(Planet::Application.config.google_map_url) %>
+<% end %>
+
 <%= form_for(@site) do |f| %>
   <% if @site.errors.any? %>
     <div id="error_explanation">
