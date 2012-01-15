@@ -27,6 +27,7 @@
     <%= f.label :type_id %><br />
     <%= f.collection_select(:type_id, Type.find(:all, :order => :name), :id, :name) %>
   </div>
+
   <div class="field">
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
@@ -45,5 +46,9 @@
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div>
+
+  <!-- Google Map container -->
+  <div id="site_map" style="width:500px; height:400px;">
   </div>
 <% end %>
